@@ -1,0 +1,6 @@
+project_id = "my-project-id"
+id         = "my-cfe-role"
+title      = "My example custom BIG-IP CFE role"
+members    = [
+  "serviceAccount:bigip@my-project-id.iam.gserviceaccount.com",
+]
