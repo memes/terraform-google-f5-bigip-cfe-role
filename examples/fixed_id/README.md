@@ -1,7 +1,7 @@
-# Simple project-level CFE custom role creation
+# Project-level CFE custom role with an explicit fixed identifier
 
 This example demonstrates how to use the module to create a CFE custom IAM role
-in a project with minimal inputs, and assign it to the list of IAM accounts provided.
+in a project with an explicit id, and assign it to the list of IAM accounts provided.
 
 ## Example tfvars file
 
@@ -11,9 +11,12 @@ in a project with minimal inputs, and assign it to the list of IAM accounts prov
 <!-- spell-checker: disable -->
 ```hcl
 project_id = "my-project-id"
+id         = "my-cfe-role"
+title      = "My example custom BIG-IP CFE role"
 members    = [
   "serviceAccount:bigip@my-project-id.iam.gserviceaccount.com",
 ]
+
 ```
 <!-- spell-checker: enable -->
 
