@@ -39,7 +39,7 @@ members    = [
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_cfe_role"></a> [cfe\_role](#module\_cfe\_role) | memes/f5-bigip-cfe-role/google | 1.0.0 |
+| <a name="module_cfe_role"></a> [cfe\_role](#module\_cfe\_role) | memes/f5-bigip-cfe-role/google | 1.0.1 |
 
 ## Resources
 
