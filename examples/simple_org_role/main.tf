@@ -8,7 +8,7 @@ terraform {
 # Create a custom F5 BIG-IP CFE role for an organization
 module "cfe_role" {
   source      = "memes/f5-bigip-cfe-role/google"
-  version     = "1.0.1"
+  version     = "1.0.2"
   target_type = "org"
   target_id   = var.org_id
 }

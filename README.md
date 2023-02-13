@@ -1,5 +1,9 @@
 # F5 BIG-IP CFE Role Terraform module
 
+![GitHub release](https://img.shields.io/github/v/release/memes/terraform-google-f5-bigip-cfe-role?sort=semver)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
 This Terraform module is a helper to create a custom IAM role that has the
 minimal permissions required for Cloud Failover Extension to function correctly.
 The role will be created in the specified project by default, but can be created
@@ -24,7 +28,7 @@ See [Simple project role](examples/simple_project_role/) example for more detail
 ```hcl
 module "cfe_role" {
   source    = "memes/f5-bigip-cfe-role/google"
-  version   = "1.0.0"
+  version   = "1.0.2"
   target_id = "my-project-id"
   members   = ["serviceAccount:bigip@my-project-id.iam.gserviceaccount.com"]
 }
@@ -39,7 +43,7 @@ See [Simple org role](examples/simple_org_role/) example for more details.
 ```hcl
 module "cfe_org_role" {
   source      = "memes/f5-bigip-cfe-role/google"
-  version     = "1.0.0"
+  version     = "1.0.2"
   target_type = "org"
   target_id   = "my-org-id"
 }
@@ -54,7 +58,7 @@ See [Fixed id](examples/fixed_id/) example for more details.
 ```hcl
 module "cfe_role" {
   source    = "memes/f5-bigip-cfe-role/google"
-  version   = "1.0.0"
+  version   = "1.0.2"
   id        = "my_custom_role"
   target_id = "my-project-id"
   title     = "An example CFE custom role for F5 BIG-IP instances"

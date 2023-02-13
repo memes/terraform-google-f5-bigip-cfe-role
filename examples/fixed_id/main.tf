@@ -9,7 +9,7 @@ terraform {
 # Create a custom CFE role with a fixed identifier
 module "cfe_role" {
   source    = "memes/f5-bigip-cfe-role/google"
-  version   = "1.0.1"
+  version   = "1.0.2"
   target_id = var.project_id
   id        = var.id
   title     = var.title
