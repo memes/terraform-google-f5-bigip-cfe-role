@@ -99,4 +99,4 @@ release-ready.%:
 		(echo "test/profiles/cfe-role/inspec.yml has incorrect tag"; exit 1)
 	@test "$(shell git status --porcelain | wc -l | grep -Eo '[0-9]+')" == "0" || \
 		(echo "Git tree is unclean"; exit 1)
-	@echo "Source is ready to be released as $*
+	@echo "Source is ready to be released as $*"
