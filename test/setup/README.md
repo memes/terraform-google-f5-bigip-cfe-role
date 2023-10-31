@@ -24,18 +24,17 @@ org_id  = "123456"
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_google"></a> [google](#requirement\_google) | >= 3.53, < 5.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 3.53, < 6.0 |
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_sa"></a> [sa](#module\_sa) | terraform-google-modules/service-accounts/google | 4.1.1 |
+No modules.
 
 ## Resources
 
 | Name | Type |
 |------|------|
+| [google_service_account.sa](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
 | [random_pet.prefix](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet) | resource |
 
 ## Inputs

@@ -3,7 +3,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = ">= 3.53, < 5.0"
+      version = ">= 3.53, < 6.0"
     }
   }
 }
@@ -16,15 +16,9 @@ resource "random_pet" "prefix" {
   }
 }
 
-module "sa" {
-  source     = "terraform-google-modules/service-accounts/google"
-  version    = "4.1.1"
-  project_id = var.project_id
-  prefix     = random_pet.prefix.id
-  names      = ["test"]
-  descriptions = [
-    "Automated test service account",
-  ]
-  project_roles = []
-  generate_keys = false
+resource "google_service_account" "sa" {
+  project      = var.project_id
+  account_id   = format("%s-test", random_pet.prefix.id)
+  display_name = "terraform-google-f5-bigip-cfe-role test service account"
+  description  = "Automated test service account"
 }
