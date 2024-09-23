@@ -21,7 +21,7 @@ resource "random_id" "role_id" {
 # this role, in addition to standard logging and monitoring roles.
 module "cfe_role" {
   source       = "terraform-google-modules/iam/google//modules/custom_role_iam"
-  version      = "7.7.1"
+  version      = "8.0.0"
   target_level = var.target_type
   target_id    = var.target_id
   role_id      = coalesce(var.id, format("%s_%s", var.random_id_prefix, random_id.role_id.hex))
