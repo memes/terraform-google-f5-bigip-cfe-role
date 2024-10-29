@@ -81,7 +81,7 @@ module "cfe_role" {
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_cfe_role"></a> [cfe\_role](#module\_cfe\_role) | terraform-google-modules/iam/google//modules/custom_role_iam | 7.7.1 |
+| <a name="module_cfe_role"></a> [cfe\_role](#module\_cfe\_role) | terraform-google-modules/iam/google//modules/custom_role_iam | 8.0.0 |
 
 ## Resources
 
