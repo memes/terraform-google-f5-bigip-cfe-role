@@ -8,6 +8,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4](https://github.com/memes/terraform-google-f5-bigip-cfe-role/compare/v1.0.3...v1.0.4) (2024-10-29)
+
+
+### Bug Fixes
+
+* Require terraform &gt;=1.3 ([4be2c61](https://github.com/memes/terraform-google-f5-bigip-cfe-role/commit/4be2c6130e3c3391ed3c7fdf8c68618b7322cb5d))
+
 ## [1.0.3](https://github.com/memes/terraform-google-f5-bigip-cfe-role/compare/v1.0.2...v1.0.3) (2023-10-31)
 
 
