@@ -69,7 +69,7 @@ module "cfe_role" {
 
 <!-- spell-checker:ignore markdownlint bigip -->
 <!-- markdownlint-disable MD033 MD034 -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -93,11 +93,11 @@ module "cfe_role" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_target_id"></a> [target\_id](#input\_target\_id) | Sets the target for role creation; must be either an organization ID (target\_type = 'org'),<br>or project ID (target\_type = 'project'). | `string` | n/a | yes |
-| <a name="input_id"></a> [id](#input\_id) | An identifier to use for the new role; default is an empty string which will<br>generate a unique identifier. If a value is provided, it must be unique at the<br>organization or project level depending on value of target\_type respectively.<br>E.g. multiple projects can all have a 'bigip\_cfe' role defined,<br>but an organization level role must be uniquely named. | `string` | `null` | no |
-| <a name="input_members"></a> [members](#input\_members) | An optional list of accounts that will be assigned the custom role. Default is<br>an empty list. | `list(string)` | `[]` | no |
-| <a name="input_random_id_prefix"></a> [random\_id\_prefix](#input\_random\_id\_prefix) | The prefix to use when generating random role identifier for the new role; default<br>is 'bigip\_cfe' which will generate a unique role identifier of the form<br>'bigip\_cfe\_XXXX', where XXXX is a random hex string. | `string` | `"bigip_cfe"` | no |
-| <a name="input_target_type"></a> [target\_type](#input\_target\_type) | Determines if the CFE role is to be created for the whole organization ('org')<br>or at a 'project' level. Default is 'project'. | `string` | `"project"` | no |
+| <a name="input_target_id"></a> [target\_id](#input\_target\_id) | Sets the target for role creation; must be either an organization ID (target\_type = 'org'),<br/>or project ID (target\_type = 'project'). | `string` | n/a | yes |
+| <a name="input_id"></a> [id](#input\_id) | An identifier to use for the new role; default is an empty string which will<br/>generate a unique identifier. If a value is provided, it must be unique at the<br/>organization or project level depending on value of target\_type respectively.<br/>E.g. multiple projects can all have a 'bigip\_cfe' role defined,<br/>but an organization level role must be uniquely named. | `string` | `null` | no |
+| <a name="input_members"></a> [members](#input\_members) | An optional list of accounts that will be assigned the custom role. Default is<br/>an empty list. | `list(string)` | `[]` | no |
+| <a name="input_random_id_prefix"></a> [random\_id\_prefix](#input\_random\_id\_prefix) | The prefix to use when generating random role identifier for the new role; default<br/>is 'bigip\_cfe' which will generate a unique role identifier of the form<br/>'bigip\_cfe\_XXXX', where XXXX is a random hex string. | `string` | `"bigip_cfe"` | no |
+| <a name="input_target_type"></a> [target\_type](#input\_target\_type) | Determines if the CFE role is to be created for the whole organization ('org')<br/>or at a 'project' level. Default is 'project'. | `string` | `"project"` | no |
 | <a name="input_title"></a> [title](#input\_title) | The human-readable title to assign to the custom CFE role. Default is 'Custom BIG-IP CFE role'. | `string` | `"Custom F5 BIG-IP CFE role"` | no |
 
 ## Outputs
@@ -105,5 +105,5 @@ module "cfe_role" {
 | Name | Description |
 |------|-------------|
 | <a name="output_qualified_role_id"></a> [qualified\_role\_id](#output\_qualified\_role\_id) | The qualified role-id for the custom CFE role. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
 <!-- markdownlint-enable MD033 MD034 -->

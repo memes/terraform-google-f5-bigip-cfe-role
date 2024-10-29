@@ -20,8 +20,11 @@ harness_outputs = JSON.parse(tf_output).map { |k,v| [k, v['value']] }.to_h
 ---
 driver:
   name: terraform
-  command_timeout: 600
   verify_version: true
+
+transport:
+  name: terraform
+  command_timeout: 600
 
 provisioner:
   name: terraform
@@ -35,8 +38,9 @@ platforms:
 
 suites:
   - name: minimal-project-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/root
+    driver:
       variables:
         target_id: '<%= harness_outputs['project_id'] %>'
     verifier:
@@ -51,8 +55,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/minimal-project-role.txt
   - name: full-random-id-project-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/root
+    driver:
       variables:
         target_type: project
         target_id: '<%= harness_outputs['project_id'] %>'
@@ -71,8 +76,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/full-random-id-project-role.txt
   - name: full-fixed-id-project-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/root
+    driver:
       variables:
         target_type: project
         target_id: '<%= harness_outputs['project_id'] %>'
@@ -91,8 +97,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/full-fixed-id-project-role.txt
   - name: minimal-org-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/root
+    driver:
       variables:
         target_type: org
         target_id: '<%= harness_outputs['org_id'] %>'
@@ -108,8 +115,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/minimal-org-role.txt
   - name: full-random-id-org-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/root
+    driver:
       variables:
         target_type: org
         target_id: '<%= harness_outputs['org_id'] %>'
@@ -128,8 +136,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/full-random-id-org-role.txt
   - name: full-fixed-id-org-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/root
+    driver:
       variables:
         target_type: org
         target_id: '<%= harness_outputs['org_id'] %>'
@@ -148,8 +157,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/full-fixed-id-org-role.txt
   - name: example-simple-project-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/examples/simple_project_role
+    driver:
       variables:
         project_id: '<%= harness_outputs['project_id'] %>'
         members: '[\"serviceAccount:<%= harness_outputs['sa'] %>\"]'
@@ -165,8 +175,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/example-simple-project-role.txt
   - name: example-simple-org-role
-    driver:
+    transport:
       root_module_directory: test/fixtures/examples/simple_org_role
+    driver:
       variables:
         org_id: '<%= harness_outputs['org_id'] %>'
     verifier:
@@ -181,8 +192,9 @@ suites:
             - cli
             - documentation:<%= report_dir %>/<%= report_ts %>/example-simple-org-role.txt
   - name: example-fixed-id
-    driver:
+    transport:
       root_module_directory: test/fixtures/examples/fixed_id
+    driver:
       variables:
         project_id: '<%= harness_outputs['project_id'] %>'
         id: '<%= harness_outputs['prefix'].gsub(/[^a-z0-9_.]/, '_') + '_example_id' %>'

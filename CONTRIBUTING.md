@@ -22,7 +22,8 @@ integrate the tool before pushing changes to GitHub.
 3. Install `pre-commit` hook to git
 
    ```shell
-   pre-commit install
+   pip install -r requirements-dev.txt
+   pre-commit install --hook-type commit-msg --hook-type pre-commit
    ```
 
    The hook will ensure that `pre-commit` will be run against all staged changes
