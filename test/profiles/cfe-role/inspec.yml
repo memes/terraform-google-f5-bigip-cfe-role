@@ -3,13 +3,13 @@ name: cfe-role
 title: F5 BIG-IP CFE custom role verification
 maintainer: Matthew Emes <memes@matthewemes.com>
 license: Apache-2.0
-version: 1.0.3
+version: 1.0.4
 supports:
   - platform: gcp
 depends:
   - name: inspec-gcp
     git: https://github.com/inspec/inspec-gcp.git
-    tag: v1.10.37
+    tag: v1.11.135
 inputs:
   - name: output_role_id
     type: string
