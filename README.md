@@ -28,7 +28,7 @@ See [Simple project role](examples/simple_project_role/) example for more detail
 ```hcl
 module "cfe_role" {
   source    = "memes/f5-bigip-cfe-role/google"
-  version   = "1.0.3"
+  version   = "1.0.4"
   target_id = "my-project-id"
   members   = ["serviceAccount:bigip@my-project-id.iam.gserviceaccount.com"]
 }
@@ -43,7 +43,7 @@ See [Simple org role](examples/simple_org_role/) example for more details.
 ```hcl
 module "cfe_org_role" {
   source      = "memes/f5-bigip-cfe-role/google"
-  version     = "1.0.3"
+  version     = "1.0.4"
   target_type = "org"
   target_id   = "my-org-id"
 }
@@ -58,7 +58,7 @@ See [Fixed id](examples/fixed_id/) example for more details.
 ```hcl
 module "cfe_role" {
   source    = "memes/f5-bigip-cfe-role/google"
-  version   = "1.0.3"
+  version   = "1.0.4"
   id        = "my_custom_role"
   target_id = "my-project-id"
   title     = "An example CFE custom role for F5 BIG-IP instances"
@@ -74,7 +74,7 @@ module "cfe_role" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_google"></a> [google](#requirement\_google) | >= 3.53, < 7.0 |
 
 ## Modules
